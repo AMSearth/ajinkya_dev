@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Tokyo Night Color Palette */
+  --bg-dark: #1a1b26;
+  --bg-darker: #16161e;
+  --bg-card: #24283b;
+  --bg-card-hover: #2e344e;
+  --bg-terminal: #1f2335;
+  --bg-terminal-header: #181b28;
+  --bg-glass: rgba(36, 40, 59, 0.75);
+  --bg-glass-nav: rgba(26, 27, 38, 0.85);
+
+  /* Text & Foreground */
+  --text-main: #c0caf5;
+  --text-bright: #ffffff;
+  --text-muted: #9aa5ce;
+  --text-dim: #565f89;
+  --text-comment: #565f89;
+
+  /* Tokyo Accent Colors */
+  --accent-blue: #7aa2f7;
+  --accent-cyan: #7dcfff;
+  --accent-magenta: #bb9af7;
+  --accent-green: #73daca;
+  --accent-orange: #ff9e64;
+  --accent-red: #f7768e;
+  --accent-yellow: #e0af68;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-magenta) 50%, var(--accent-cyan) 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(122, 162, 247, 0.2), rgba(187, 154, 247, 0.2));
+  --gradient-card: linear-gradient(180deg, rgba(36, 40, 59, 0.9) 0%, rgba(31, 35, 53, 0.9) 100%);
+
+  /* Borders & Shadows */
+  --border-color: rgba(65, 72, 104, 0.6);
+  --border-active: rgba(122, 162, 247, 0.8);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 0 25px rgba(122, 162, 247, 0.25);
+  --shadow-cyan-glow: 0 0 25px rgba(125, 207, 255, 0.3);
+
+  /* Fonts */
+  --font-code: 'Fira Code', 'Courier New', monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Layout Constants */
+  --container-max: 1200px;
+  --header-height: 76px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
