@@ -36,6 +36,9 @@
         <li><a href="#cli" class="nav-link">Terminal</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="mobile-only-hire">
+          <a href="#contact" class="btn btn-primary btn-mobile-hire">Hire Me 🚀</a>
+        </li>
       </ul>
 
       <div class="nav-actions">
@@ -43,11 +46,12 @@
           <span class="pulse-indicator"></span>
           <span>Available for Hire</span>
         </div>
-        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <a href="#contact" class="btn btn-primary btn-sm desktop-hire-btn">Hire Me</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">☰</button>
       </div>
     </div>
   </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <main>
     <!-- Hero Section -->
@@ -56,7 +60,7 @@
         <div class="hero-grid">
           
           <!-- Left Column: Intro Text -->
-          <div class="hero-content reveal-up">
+          <div class="hero-content">
             <div class="hero-tag">
               <span>AJINKYA SHINDE</span>
             </div>
@@ -100,7 +104,7 @@
           </div>
 
           <!-- Right Column: Interactive Code Terminal Card -->
-          <div class="hero-visual reveal-scale">
+          <div class="hero-visual">
             <div class="terminal-window animate-glow">
               <div class="terminal-header">
                 <div class="window-dots">
