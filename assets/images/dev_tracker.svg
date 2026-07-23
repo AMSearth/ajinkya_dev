@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161e"/>
+      <stop offset="100%" stop-color="#1a1b26"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dcfff"/>
+      <stop offset="100%" stop-color="#7aa2f7"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bb9af7"/>
+      <stop offset="100%" stop-color="#f7768e"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="#24283b" stroke-width="1" opacity="0.4">
+    <path d="M 0 50 L 800 50 M 0 100 L 800 100 M 0 150 L 800 150 M 0 200 L 800 200 M 0 250 L 800 250 M 0 300 L 800 300 M 0 350 L 800 350 M 0 400 L 800 400"/>
+    <path d="M 100 0 L 100 450 M 200 0 L 200 450 M 300 0 L 300 450 M 400 0 L 400 450 M 500 0 L 500 450 M 600 0 L 600 450 M 700 0 L 700 450"/>
+  </g>
+
+  <!-- Window Container -->
+  <rect x="40" y="30" width="720" height="390" rx="12" fill="#1f2335" stroke="#414868" stroke-width="1.5"/>
+  
+  <!-- Window Header -->
+  <path d="M 40 42 A 12 12 0 0 1 52 30 L 748 30 A 12 12 0 0 1 760 42 L 760 70 L 40 70 Z" fill="#16161e"/>
+  <circle cx="65" cy="50" r="6" fill="#f7768e"/>
+  <circle cx="85" cy="50" r="6" fill="#e0af68"/>
+  <circle cx="105" cy="50" r="6" fill="#9ece6a"/>
+  <text x="400" y="55" fill="#a9b1d6" font-family="monospace" font-size="13" text-anchor="middle">dev-tracker :: React + FastAPI Dashboard</text>
+
+  <!-- Sidebar -->
+  <rect x="40" y="70" width="160" height="350" fill="#1a1b26" opacity="0.8"/>
+  <rect x="55" y="95" width="130" height="32" rx="6" fill="#24283b"/>
+  <text x="85" y="116" fill="#7dcfff" font-family="sans-serif" font-size="12" font-weight="600">⚡ Tasks</text>
+  <text x="85" y="160" fill="#a9b1d6" font-family="sans-serif" font-size="12">📊 Metrics</text>
+  <text x="85" y="200" fill="#a9b1d6" font-family="sans-serif" font-size="12">🔗 APIs (FastAPI)</text>
+  <text x="85" y="240" fill="#a9b1d6" font-family="sans-serif" font-size="12">⚙️ Settings</text>
+
+  <!-- Main Content: Kanban Columns -->
+  <!-- Column 1: In Progress -->
+  <rect x="220" y="90" width="160" height="310" rx="8" fill="#16161e" stroke="#24283b"/>
+  <text x="235" y="115" fill="#7aa2f7" font-family="sans-serif" font-size="13" font-weight="700">IN PROGRESS (2)</text>
+  
+  <rect x="230" y="130" width="140" height="75" rx="6" fill="#24283b" stroke="#7aa2f7" stroke-width="1"/>
+  <text x="240" y="152" fill="#c0caf5" font-family="sans-serif" font-size="11" font-weight="600">FastAPI Async Endpoint</text>
+  <rect x="240" y="165" width="45" height="16" rx="4" fill="#7dcfff" opacity="0.2"/>
+  <text x="248" y="177" fill="#7dcfff" font-family="sans-serif" font-size="9">Backend</text>
+
+  <rect x="230" y="215" width="140" height="75" rx="6" fill="#24283b" stroke="#24283b"/>
+  <text x="240" y="237" fill="#c0caf5" font-family="sans-serif" font-size="11" font-weight="600">React Task State</text>
+  <rect x="240" y="250" width="45" height="16" rx="4" fill="#bb9af7" opacity="0.2"/>
+  <text x="248" y="262" fill="#bb9af7" font-family="sans-serif" font-size="9">React</text>
+
+  <!-- Column 2: Completed -->
+  <rect x="400" y="90" width="160" height="310" rx="8" fill="#16161e" stroke="#24283b"/>
+  <text x="415" y="115" fill="#9ece6a" font-family="sans-serif" font-size="13" font-weight="700">COMPLETED (3)</text>
+
+  <rect x="410" y="130" width="140" height="75" rx="6" fill="#24283b" stroke="#9ece6a" stroke-width="1"/>
+  <text x="420" y="152" fill="#c0caf5" font-family="sans-serif" font-size="11" font-weight="600">JWT Authentication</text>
+  <rect x="420" y="165" width="45" height="16" rx="4" fill="#9ece6a" opacity="0.2"/>
+  <text x="428" y="177" fill="#9ece6a" font-family="sans-serif" font-size="9">Security</text>
+
+  <!-- Column 3: API Telemetry Graph -->
+  <rect x="580" y="90" width="160" height="310" rx="8" fill="#16161e" stroke="#24283b"/>
+  <text x="595" y="115" fill="#7dcfff" font-family="sans-serif" font-size="13" font-weight="700">API METRICS</text>
+
+  <path d="M 595 240 Q 620 180 645 220 T 695 160 T 725 190" fill="none" stroke="url(#cyanGrad)" stroke-width="3" filter="url(#glow)"/>
+  <path d="M 595 270 Q 620 230 645 250 T 695 210 T 725 240" fill="none" stroke="url(#purpleGrad)" stroke-width="2" opacity="0.7"/>
+
+  <rect x="595" y="290" width="130" height="35" rx="6" fill="#24283b"/>
+  <text x="605" y="306" fill="#a9b1d6" font-family="sans-serif" font-size="10">Latency: <tspan fill="#7dcfff" font-weight="bold">12ms</tspan></text>
+  <text x="605" y="320" fill="#a9b1d6" font-family="sans-serif" font-size="10">Uptime: <tspan fill="#9ece6a" font-weight="bold">99.98%</tspan></text>
+</svg>

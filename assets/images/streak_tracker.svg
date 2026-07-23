@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161e"/>
+      <stop offset="100%" stop-color="#1a1b26"/>
+    </linearGradient>
+    <linearGradient id="fireGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9e64"/>
+      <stop offset="100%" stop-color="#f7768e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Window Container -->
+  <rect x="40" y="30" width="720" height="390" rx="12" fill="#1f2335" stroke="#414868" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <path d="M 40 42 A 12 12 0 0 1 52 30 L 748 30 A 12 12 0 0 1 760 42 L 760 70 L 40 70 Z" fill="#16161e"/>
+  <circle cx="65" cy="50" r="6" fill="#f7768e"/>
+  <circle cx="85" cy="50" r="6" fill="#e0af68"/>
+  <circle cx="105" cy="50" r="6" fill="#9ece6a"/>
+  <text x="400" y="55" fill="#a9b1d6" font-family="monospace" font-size="13" text-anchor="middle">Streak Tracker :: Habit &amp; Goal Consistency Logger (Java)</text>
+
+  <!-- Left Hero Banner: Streak Banner -->
+  <rect x="70" y="95" width="280" height="300" rx="10" fill="#16161e" stroke="#ff9e64" stroke-width="1.5"/>
+  <text x="210" y="140" fill="#ff9e64" font-family="sans-serif" font-size="32" text-anchor="middle">🔥</text>
+  <text x="210" y="180" fill="#ff9e64" font-family="sans-serif" font-size="42" font-weight="800" text-anchor="middle">42 DAYS</text>
+  <text x="210" y="210" fill="#a9b1d6" font-family="sans-serif" font-size="14" text-anchor="middle">CURRENT ACTIVE STREAK</text>
+
+  <rect x="100" y="240" width="220" height="12" rx="6" fill="#24283b"/>
+  <rect x="100" y="240" width="185" height="12" rx="6" fill="url(#fireGrad)"/>
+  <text x="210" y="275" fill="#9ece6a" font-family="sans-serif" font-size="12" text-anchor="middle">Goal Completion Rate: 88%</text>
+
+  <!-- Right Section: Habit Grid Heatmap -->
+  <rect x="370" y="95" width="360" height="300" rx="10" fill="#16161e" stroke="#24283b"/>
+  <text x="390" y="125" fill="#7dcfff" font-family="sans-serif" font-size="14" font-weight="700">DAILY HABITS HEATMAP</text>
+
+  <!-- Habit 1: Java Coding -->
+  <text x="390" y="160" fill="#c0caf5" font-family="sans-serif" font-size="12">Daily Java Coding</text>
+  <g transform="translate(390, 170)">
+    <rect x="0" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="22" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="44" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="66" y="0" width="16" height="16" rx="3" fill="#73daca"/>
+    <rect x="88" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="110" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="132" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="154" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="176" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="198" y="0" width="16" height="16" rx="3" fill="#73daca"/>
+    <rect x="220" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="242" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="264" y="0" width="16" height="16" rx="3" fill="#9ece6a"/>
+    <rect x="286" y="0" width="16" height="16" rx="3" fill="#7dcfff"/>
+  </g>
+
+  <!-- Habit 2: Algorithmic Logic -->
+  <text x="390" y="225" fill="#c0caf5" font-family="sans-serif" font-size="12">Data Structures &amp; Algorithms</text>
+  <g transform="translate(390, 235)">
+    <rect x="0" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="22" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="44" y="0" width="16" height="16" rx="3" fill="#24283b"/>
+    <rect x="66" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="88" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="110" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="132" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="154" y="0" width="16" height="16" rx="3" fill="#bb9af7"/>
+    <rect x="176" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="198" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="220" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="242" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="264" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+    <rect x="286" y="0" width="16" height="16" rx="3" fill="#7aa2f7"/>
+  </g>
+
+  <!-- Habit 3: Code Review -->
+  <text x="390" y="290" fill="#c0caf5" font-family="sans-serif" font-size="12">Git Commits &amp; Code Review</text>
+  <g transform="translate(390, 300)">
+    <rect x="0" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="22" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="44" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="66" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="88" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="110" y="0" width="16" height="16" rx="3" fill="#24283b"/>
+    <rect x="132" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="154" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="176" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="198" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="220" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="242" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="264" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+    <rect x="286" y="0" width="16" height="16" rx="3" fill="#e0af68"/>
+  </g>
+</svg>

@@ -21,24 +21,26 @@
   <span class="code-var">clear</span>      - Clear terminal screen
 `,
     skills: `
-<span class="code-keyword">⚡ Core Technical Skills:</span>
-  <span class="code-func">Frontend:</span>    HTML5, CSS3/SASS, JavaScript (ES6+), React.js, Vue.js, Tailwind CSS
-  <span class="code-func">Backend:</span>     Node.js, Express, REST APIs, GraphQL, Python (FastAPI/Django)
-  <span class="code-func">Databases:</span>   MongoDB, PostgreSQL, Redis, Firebase
-  <span class="code-func">Tools & Ops:</span> Git, Webpack, Vite, Docker, Vercel, Figma, Jest/Testing
+<span class="code-keyword">⚡ Core Technical Stack (AMSearth):</span>
+  <span class="code-func">Frontend:</span>    JavaScript (ES6+), React.js, Dart, Flutter, HTML5, CSS3
+  <span class="code-func">Backend:</span>     Python (FastAPI), PHP, Java (OOP), REST APIs
+  <span class="code-func">Databases:</span>   MySQL, Relational Data Schemas
+  <span class="code-func">Tools & Ops:</span> Git, GitHub Actions, Lua (Neovim), Machine Learning (Jupyter/Python), C
 `,
     projects: `
-<span class="code-keyword">🚀 Featured Projects:</span>
-  <span class="code-var">[1] Nexa Analytics SaaS</span>   - Real-time telemetry dashboard (React, D3.js, WebSockets)
-  <span class="code-var">[2] CyberShop E-Commerce</span>  - Modern high-converting online store (Vanilla JS, Node, Stripe)
-  <span class="code-var">[3] Aether AI IDE</span>         - Browser-based code assistant interface (Monaco Editor, Web Workers)
-  <span class="code-comment">Type 'contact' or scroll to Projects section for live demos!</span>
+<span class="code-keyword">🚀 Featured Projects (AMSearth):</span>
+  <span class="code-var">[1] Dev Tracker</span>      - Full-stack task & progress tracker (React + FastAPI)
+  <span class="code-var">[2] Club Manager</span>     - Member & event management web system (PHP + MySQL)
+  <span class="code-var">[3] Streak Tracker</span>   - Habit logging & streak tracker (Java)
+  <span class="code-var">[4] Milk Muster</span>      - Mobile dairy yield & collection app (Dart + Flutter)
+  <span class="code-comment">Scroll to Featured Projects section or visit github.com/AMSearth!</span>
 `,
     contact: `
 <span class="code-keyword">📫 Direct Contact:</span>
-  <span class="code-func">Email:</span>    ajinkya.dev@example.com
-  <span class="code-func">GitHub:</span>   github.com/ajinkya-tech
-  <span class="code-func">LinkedIn:</span> linkedin.com/in/ajinkya-dev
+  <span class="code-func">Email:</span>    ajinkya.manoj.shinde@gmail.com
+  <span class="code-func">WhatsApp:</span> +91 8177890371
+  <span class="code-func">GitHub:</span>   github.com/AMSearth
+  <span class="code-func">LinkedIn:</span> linkedin.com/in/ajinkya-shinde-b8136b27b
   <span class="code-func">Status:</span>   <span class="code-str">🟢 Open for Freelance & Contract Projects</span>
 `,
     hire: `

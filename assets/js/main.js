@@ -18,13 +18,13 @@ function initTypewriter() {
   if (!codeEl) return;
 
   const codeSnippet = `const developer = {
-  name: "Ajinkya",
-  title: "Senior Web Developer",
+  name: "Ajinkya Shinde",
+  github: "AMSearth 🚀",
   theme: "Tokyo Night 🌙",
   font: "Fira Code",
-  status: "Available for Clients 🚀",
-  skills: ["HTML5", "CSS3", "JavaScript", "React", "Node.js"],
-  motto: "Building ultra-fast, visually stunning web experiences."
+  status: "Open for Opportunities 🟢",
+  skills: ["React", "Python", "FastAPI", "Dart/Flutter", "PHP", "Java", "Lua"],
+  motto: "Building high-performance, visually captivating digital products."
 };`;
 
   let i = 0;
@@ -138,47 +138,57 @@ function initProjectModals() {
   const triggerBtns = document.querySelectorAll('.view-project-btn');
 
   const projectDetails = {
-    'saas': {
-      title: 'Nexa Analytics - SaaS Dashboard Platform',
-      image: 'assets/images/saas_dashboard.jpg',
-      tags: ['HTML5', 'CSS3', 'JS ES6+', 'Chart.js', 'REST API'],
-      desc: 'High-performance analytics web dashboard created for modern tech startups. Features real-time metric updates, dynamic charts, theme customizable widgets, and responsive data visualizer.',
+    'devtracker': {
+      title: 'Dev Tracker — React + FastAPI Application',
+      image: 'assets/images/dev_tracker.svg',
+      tags: ['React', 'FastAPI', 'Python', 'REST API', 'JavaScript'],
+      desc: 'A full-stack developer tracker built with React on the frontend and FastAPI on the backend for monitoring project tasks, build progress, and developer metrics.',
       features: [
-        'Interactive real-time user session graphs',
-        'Custom modular card widgets with glow effects',
-        'Exportable CSV and PDF report summaries',
-        'Optimized sub-second render performance'
+        'React component architecture with state management',
+        'FastAPI REST endpoints for high-throughput request handling',
+        'Developer performance and task progress analytics',
+        'Clean modular repository architecture'
       ],
-      demoUrl: '#',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/AMSearth/dev-tracker'
     },
-    'ecommerce': {
-      title: 'CyberShop - High Conversion E-Commerce Store',
-      image: 'assets/images/ecommerce_store.jpg',
-      tags: ['HTML5', 'CSS3 Architecture', 'JS ES6+', 'Stripe Checkout'],
-      desc: 'Next-generation tech shop frontend with glowing cyber aesthetics, interactive cart overlay, instant keyword search, and seamless checkout flow.',
+    'clubmanager': {
+      title: 'Club Manager — Member & Event System',
+      image: 'assets/images/club_manager.svg',
+      tags: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript'],
+      desc: 'Comprehensive club management web system designed to manage member registrations, event schedules, payments, and administrative control panels.',
       features: [
-        'Interactive shopping cart state management in pure JS',
-        'Filter products by category, rating, and price spectrum',
-        'Responsive mobile grid layout with instant animations',
-        'Stripe payment gateway modal interface'
+        'Member directory & profile administration',
+        'Event scheduling and attendance tracking',
+        'Database CRUD workflows powered by PHP & MySQL',
+        'Responsive administration dashboard'
       ],
-      demoUrl: '#',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/AMSearth/ClubManager'
     },
-    'aicode': {
-      title: 'Aether AI Code Studio & Assistant',
-      image: 'assets/images/ai_code_editor.jpg',
-      tags: ['HTML5', 'CSS Grid/Flexbox', 'JS Canvas/Worker', 'Monaco API'],
-      desc: 'A browser-based developer IDE interface with syntax highlighting, live code preview, and AI suggestion sidebar.',
+    'streaktracker': {
+      title: 'Streak Tracker — Consistency Logger',
+      image: 'assets/images/streak_tracker.svg',
+      tags: ['Java', 'Object-Oriented Programming', 'Data Structures'],
+      desc: 'Habit & goal consistency tracking software written in Java. Computes ongoing streaks, habit completions, and historic streak statistics.',
       features: [
-        'Tokyo Night code editor styling with monospace typography',
-        'Real-time AI code refactoring suggestions panel',
-        'Web worker based code compilation and linting',
-        'Customizable editor settings & keybindings'
+        'Streak calculation and daily milestone checks',
+        'Clean Object-Oriented Java data models',
+        'Habit history logging and progress metric generation',
+        'Efficient algorithmic tracking routines'
       ],
-      demoUrl: '#',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/AMSearth/streak_tracker'
+    },
+    'milkmuster': {
+      title: 'Milk Muster — Mobile Dairy Management App',
+      image: 'assets/images/milk_muster.svg',
+      tags: ['Dart', 'Flutter', 'Mobile', 'Cross-Platform'],
+      desc: 'Mobile application built with Flutter and Dart for real-time tracking of dairy collection, inventory yield, and distribution logistics.',
+      features: [
+        'Cross-platform iOS & Android mobile UI',
+        'Real-time collection logging & yield summary reports',
+        'Intuitive UI components tailored for field operations',
+        'Fast reactive state rendering in Flutter'
+      ],
+      repoUrl: 'https://github.com/AMSearth/MILK_MUSTER'
     }
   };
 
@@ -202,9 +212,8 @@ function initProjectModals() {
         <ul style="margin-bottom: 1.5rem; padding-left: 1.2rem; color: var(--text-main);">
           ${data.features.map(f => `<li style="margin-bottom: 0.4rem;">${f}</li>`).join('')}
         </ul>
-        <div style="display: flex; gap: 1rem;">
-          <button onclick="alert('Live demo loaded in test sandbox mode!')" class="btn btn-primary btn-sm">Launch Live Demo</button>
-          <button onclick="alert('Redirecting to client repository...')" class="btn btn-secondary btn-sm">View Source Code</button>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="${data.repoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View GitHub Repository ↗</a>
         </div>
       `;
 

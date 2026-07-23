@@ -43,13 +43,13 @@
 
 6. **Floating Quick Action Contact Dock**:
    - Fixed bottom-right floating quick contact buttons:
-     - **WhatsApp**: Neon green glowing button with pulse ring, linking to pre-filled `wa.me` chat.
-     - **Gmail**: Neon cyan glowing button linking to `mailto:ajinkya.dev@example.com`.
+     - **WhatsApp**: Neon green glowing button with pulse ring, linking to pre-filled `wa.me/918177890371` chat.
+     - **Gmail**: Neon cyan glowing button linking to `mailto:ajinkya.manoj.shinde@gmail.com`.
      - Tooltips with Fira Code styling popping up on hover.
 
 7. **Client Contact Form & Direct Info**:
    - Validated message form with instant success toast.
-   - Quick one-click copy buttons for email (`ajinkya.dev@example.com`).
+   - Direct WhatsApp contact (`+91 8177890371`) and quick one-click copy button for email (`ajinkya.manoj.shinde@gmail.com`).
 
 ---
 
