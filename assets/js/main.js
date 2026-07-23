@@ -2,6 +2,17 @@
  * Main Application Logic & Interactivity
  */
 document.addEventListener('DOMContentLoaded', () => {
+  // Prevent auto-scrolling to hash/terminal on page open/refresh
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  if (!window.location.hash || window.location.hash === '#cli') {
+    window.scrollTo(0, 0);
+    if (window.location.hash === '#cli') {
+      history.replaceState(null, null, ' ');
+    }
+  }
+
   initTypewriter();
   initScrollReveal();
   initSkillsFilter();
@@ -36,7 +47,13 @@ function initTypewriter() {
       if (char === '\n') {
         codeEl.innerHTML += '<br>';
       } else if (char === ' ') {
-        codeEl.innerHTML += '&nbsp;';
+        // If at start of line or following another space, use &nbsp; for indentation; otherwise use normal space for clean mobile wrapping
+        const lastChar = i > 0 ? codeSnippet.charAt(i - 1) : '';
+        if (lastChar === '\n' || lastChar === ' ') {
+          codeEl.innerHTML += '&nbsp;';
+        } else {
+          codeEl.innerHTML += ' ';
+        }
       } else {
         codeEl.innerHTML += escapeHtml(char);
       }
@@ -201,15 +218,15 @@ function initProjectModals() {
 
       modalTitle.innerText = data.title;
       modalBody.innerHTML = `
-        <div style="margin-bottom: 1.2rem; border-radius: 8px; overflow: hidden;">
-          <img src="${data.image}" alt="${data.title}" style="width: 100%; height: 260px; object-fit: cover; border-radius: 8px;">
+        <div style="margin-bottom: 1.2rem; border-radius: 8px; overflow: hidden; max-height: 240px;">
+          <img src="${data.image}" alt="${data.title}" style="width: 100%; max-height: 240px; height: auto; object-fit: cover; border-radius: 8px;">
         </div>
         <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
           ${data.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
         </div>
-        <p style="color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.6;">${data.desc}</p>
-        <h4 style="color: var(--accent-cyan); margin-bottom: 0.6rem;">Key Features:</h4>
-        <ul style="margin-bottom: 1.5rem; padding-left: 1.2rem; color: var(--text-main);">
+        <p style="color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.6; font-size: 0.9rem;">${data.desc}</p>
+        <h4 style="color: var(--accent-cyan); margin-bottom: 0.6rem; font-size: 0.95rem;">Key Features:</h4>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.2rem; color: var(--text-main); font-size: 0.88rem;">
           ${data.features.map(f => `<li style="margin-bottom: 0.4rem;">${f}</li>`).join('')}
         </ul>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
@@ -218,16 +235,22 @@ function initProjectModals() {
       `;
 
       modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   });
 
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
   if (modalClose) {
-    modalClose.addEventListener('click', () => modal.classList.remove('active'));
+    modalClose.addEventListener('click', closeModal);
   }
 
   if (modal) {
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.remove('active');
+      if (e.target === modal) closeModal();
     });
   }
 }

@@ -18,11 +18,31 @@
   };
 
   window.addEventListener('mousemove', (e) => {
-    mouse.x = e.x;
-    mouse.y = e.y;
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
   });
 
   window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Touch event support for mobile devices
+  window.addEventListener('touchstart', (e) => {
+    if (e.touches.length > 0) {
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 0) {
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
     mouse.x = null;
     mouse.y = null;
   });
@@ -32,7 +52,10 @@
     height = canvas.height = window.innerHeight;
   }
 
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', () => {
+    resize();
+    init();
+  });
   resize();
 
   // Color Palette
@@ -65,7 +88,7 @@
       if (this.x < 0 || this.x > width) this.vx *= -1;
       if (this.y < 0 || this.y > height) this.vy *= -1;
 
-      // Mouse interactive force
+      // Mouse/Touch interactive force
       if (mouse.x !== null && mouse.y !== null) {
         const dx = mouse.x - this.x;
         const dy = mouse.y - this.y;
@@ -88,7 +111,8 @@
 
   function init() {
     particles = [];
-    const count = Math.min(Math.floor((width * height) / 14000), 80);
+    const maxParticles = width < 768 ? 35 : 80;
+    const count = Math.min(Math.floor((width * height) / 18000), maxParticles);
     for (let i = 0; i < count; i++) {
       particles.push(new Particle());
     }
